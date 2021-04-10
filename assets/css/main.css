@@ -29,6 +29,9 @@ nav {
 .evo {
   color: #16c784;
 }
+.evo-neg {
+  color: #ff4343;
+}
 .separator {
   background-color: #343434;
   width: 1px;

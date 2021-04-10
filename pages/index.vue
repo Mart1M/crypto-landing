@@ -25,112 +25,79 @@
       <CTA-primary />
     </section>
     <section class="w-screen flex items-center price-list">
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/bitcoin-btc-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">Bitcoin</p>
-            <p class="indice font-medium">BTC</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+
+      <div v-if="currencies.data[0].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/bitcoin-btc-logo.png" :name="currencies.data[0].name" :symbol="currencies.data[0].symbol" :price="Math.round(currencies.data[0].quote.USD.price*100)/100" :change="Math.round(currencies.data[0].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/bitcoin-btc-logo.png" :name="currencies.data[0].name" :symbol="currencies.data[0].symbol" :price="Math.round(currencies.data[0].quote.USD.price*100)/100" :change="Math.round(currencies.data[0].quote.USD.percent_change_24h *100)/100" />
+      </div>
+      
       <div class="separator"></div>
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/ethereum-eth-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">Ethereum</p>
-            <p class="indice font-medium">ETH</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+      <div v-if="currencies.data[1].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/ethereum-eth-logo.png" :name="currencies.data[1].name" :symbol="currencies.data[1].symbol" :price="Math.round(currencies.data[1].quote.USD.price*100)/100" :change="Math.round(currencies.data[1].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/ethereum-eth-logo.png" :name="currencies.data[1].name" :symbol="currencies.data[1].symbol" :price="Math.round(currencies.data[1].quote.USD.price*100)/100" :change="Math.round(currencies.data[1].quote.USD.percent_change_24h *100)/100" />
+      </div>
+
       <div class="separator"></div>
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/binance-coin-bnb-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">Binance Coin</p>
-            <p class="indice font-medium">BNB</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+      <div v-if="currencies.data[2].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" :name="currencies.data[2].name" :symbol="currencies.data[2].symbol" :price="Math.round(currencies.data[2].quote.USD.price*100)/100" :change="Math.round(currencies.data[2].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" :name="currencies.data[2].name" :symbol="currencies.data[2].symbol" :price="Math.round(currencies.data[2].quote.USD.price*100)/100" :change="Math.round(currencies.data[2].quote.USD.percent_change_24h *100)/100" />
+      </div>
+
       <div class="separator"></div>
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/xrp-xrp-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">XRP</p>
-            <p class="indice font-medium">XRP</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+      <div v-if="currencies.data[3].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/xrp-xrp-logo.png" :name="currencies.data[3].name" :symbol="currencies.data[3].symbol" :price="Math.round(currencies.data[3].quote.USD.price*100)/100" :change="Math.round(currencies.data[3].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/xrp-xrp-logo.png" :name="currencies.data[3].name" :symbol="currencies.data[3].symbol" :price="Math.round(currencies.data[3].quote.USD.price*100)/100" :change="Math.round(currencies.data[3].quote.USD.percent_change_24h *100)/100" />
+      </div>
+
       <div class="separator"></div>
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/tether-usdt-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">Tether</p>
-            <p class="indice font-medium">USDT</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+      <div v-if="currencies.data[4].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/tether-usdt-logo.png" :name="currencies.data[4].name" :symbol="currencies.data[4].symbol" :price="Math.round(currencies.data[4].quote.USD.price*100)/100" :change="Math.round(currencies.data[4].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/tether-usdt-logo.png" :name="currencies.data[4].name" :symbol="currencies.data[4].symbol" :price="Math.round(currencies.data[4].quote.USD.price*100)/100" :change="Math.round(currencies.data[4].quote.USD.percent_change_24h *100)/100" />
+      </div>
+
       <div class="separator"></div>
-      <div class="price p-4 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-          <img src="../assets/img/cardano-ada-logo.png" alt="">
-          <div class="flex flex-col">
-            <p class="text-white font-medium">Cardano</p>
-            <p class="indice font-medium">ADA</p>
-          </div>
-        </div>
-        <div class="flex flex-col items-end">
-          <p class="text-white font-bold ">$57,960.65</p>
-          <div class="flex evo">
-            <img src="../assets/icons/bx-caret-up.svg" alt="">
-            <p>1.35%</p>
-          </div>
-        </div>
+
+      <div v-if="currencies.data[5].quote.USD.percent_change_24h > 0" class="w-full">
+        <PricePos logo="https://cryptologos.cc/logos/cardano-ada-logo.png" :name="currencies.data[5].name" :symbol="currencies.data[5].symbol" :price="Math.round(currencies.data[5].quote.USD.price*100)/100" :change="Math.round(currencies.data[5].quote.USD.percent_change_24h *100)/100" />
       </div>
+      <div v-else class="w-full">
+        <PriceNeg logo="https://cryptologos.cc/logos/cardano-ada-logo.png" :name="currencies.data[5].name" :symbol="currencies.data[5].symbol" :price="Math.round(currencies.data[5].quote.USD.price*100)/100" :change="Math.round(currencies.data[5].quote.USD.percent_change_24h *100)/100" />
+      </div>      
     </section>
+    
   </div>
 </template>
 
-<script>
-export default {}
-</script>
 
+
+
+<script>
+import PricePos from "../components/PricePos.vue";
+export default {
+    data() {
+      return {
+        currencies: []
+      }
+    },
+    async fetch() {
+      this.currencies = await fetch(
+        'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=b6ac267d-71a4-456a-8fc9-52d2212787ee'
+      ).then(res => res.json())
+    }
+  }
+</script>
