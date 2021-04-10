@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 body {
-    background-color: aqua !important;
+  font-family: "Roboto", sans-serif;
+  background-color: #1d1d1d;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+nav {
+  background-color: #252525;
+  justify-content: space-between;
+}
+.cta-little {
+  background-color: #5236ff;
+}
+.hero {
+  background-image: url(../img/hero-bg.png);
+  background-size: cover;
+}
+.hero-subtitle {
+  color: #787878;
+  font-weight: 700;
+}
+.indice {
+  color: #a7a7a7;
+}
+
+.evo {
+  color: #16c784;
+}
+.separator {
+  background-color: #343434;
+  width: 1px;
+  height: 40px;
+}
+.price-list {
+  background-color: #151515;
 }
