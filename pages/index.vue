@@ -1,6 +1,6 @@
 <template>
   <div class="container ">
-    <nav class="nav p-3 flex items-center w-screen px-24">
+    <nav class="nav p-3 flex items-center w-screen px-40">
       <img src="../assets/img/log.png" alt="">
       <ul class="flex space-x-12 text-white">
         <li><a href="">Buy Crypto</a></li>
@@ -21,7 +21,7 @@
     </nav>
     <section class="hero flex justify-center items-center w-screen h-72 flex-col space-y-5">
       <h1 class="text-white">Buy & Sell Crypto in seconds</h1>
-      <p class="hero-subtitle">Join the world’s largest crypto exchange</p>
+      <p class="subtitle">Join the world’s largest crypto exchange</p>
       <CTA-primary />
     </section>
     <section class="w-screen flex items-center price-list">
@@ -79,6 +79,31 @@
         <PriceNeg logo="https://cryptologos.cc/logos/cardano-ada-logo.png" :name="currencies.data[5].name" :symbol="currencies.data[5].symbol" :price="Math.round(currencies.data[5].quote.USD.price*100)/100" :change="Math.round(currencies.data[5].quote.USD.percent_change_24h *100)/100" />
       </div>      
     </section>
+
+    <section class="grid grid-cols-2 px-40 gap-8 w-screen py-40">
+      <section class="flex flex-col justify-center space-y-4">
+        <h1 class="text-white">Trade. Anywhere.</h1>
+        <p class="subtitle">Compatible with multiple devices, start trading with safety and convenience</p>
+        <div class="flex space-x-8">
+          <img src="../assets/icons/bxl-apple.svg" alt="">
+          <img src="../assets/icons/bxl-android.svg" alt="">
+          <img src="../assets/icons/bxl-play.svg" alt="">
+          <img src="../assets/icons/bxl-win.svg" alt="">
+          <img src="../assets/icons/bxl-linux.svg" alt="">
+        </div>
+      </section>
+      <section class="flex justify-end w-full">
+        <img src="../assets/img/illu.png" alt="">
+      </section>
+    </section>
+
+    <section class="par-section w-screen">
+      <img src="../assets/img/back.png" alt="" id="back">
+      <img src="../assets/img/front.png" alt="" id="front">
+      <h1 class="text-white" id="text-parallax">100+ Cryptocurrency Assets</h1>
+      
+      
+    </section>
     
   </div>
 </template>
@@ -99,5 +124,9 @@ export default {
         'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=b6ac267d-71a4-456a-8fc9-52d2212787ee'
       ).then(res => res.json())
     }
+
+  
   }
+
+  
 </script>
