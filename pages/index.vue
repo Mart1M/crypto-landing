@@ -8,7 +8,6 @@
         <li><a href="">Trade</a></li>
         <li><a href="">Derivatives</a></li>
         <li><a href="">Finance</a></li>
-        <li><button @click="$fetch">Refresh</button></li>
       </ul>
       <div class="flex space-x-4 items-center">
         <a class="text-white" href="#">Log In</a>
@@ -125,15 +124,10 @@ export default {
       this.currencies = await fetch(
         'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=b6ac267d-71a4-456a-8fc9-52d2212787ee'
       ).then(res => res.json())
-    },
-    methods: {
-    refresh() {
-      this.$fetch()
     }
   }
 
   
-  }
 
   
 </script>
