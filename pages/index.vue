@@ -97,10 +97,10 @@
       </section>
     </section>
 
-    <section class="par-section w-screen">
-      <img src="../assets/img/back.png" alt="" id="back">
-      <img src="../assets/img/front.png" alt="" id="front">
-      <h1 class="text-white" id="text-parallax">100+ Cryptocurrency Assets</h1>
+    <section class="w-screen flex flex-col items-center">
+      <h1 class="text-white pb-8">100+ Cryptocurrency Assets</h1>
+      <img src="../assets/img/cryptos.png" alt="" width="700px">
+      
       
       
     </section>
