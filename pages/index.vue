@@ -113,6 +113,7 @@
 
 <script>
 import PricePos from "../components/PricePos.vue";
+import PriceNeg from "../components/PriceNeg.vue";
 export default {
     data() {
       return {
