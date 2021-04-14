@@ -1,5 +1,5 @@
 <template>
-    <div class="price p-4 flex justify-between w-full">
+    <div class="p-4 flex justify-between w-full">
         <div class="flex items-center space-x-4">
           <img :src="logo" alt="logo" width="16px">
           <div class="flex flex-col">
@@ -14,6 +14,7 @@
             <img src="../assets/icons/bx-caret-up.svg" alt="">
             <p>{{change}} %</p>
           </div>
+
 
         </div>
       </div>
@@ -31,7 +32,8 @@ export default {
      type: String,
      required: true
    }
- }
+ },
+ 
    
 }
 </script>
